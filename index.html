@@ -5,184 +5,1011 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <title>Dinuka Wickramasinghe | Computer Science Student & Developer</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="header">
-    <div class="container">
-        <nav>
-            
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <p>Computer Science Undergraduate</p>
-            <h1>Hi, I'm <span>Dinuka</span><br>from KDU</h1>
-        </div>
-    </div>
-</div>
-<!-- -----------about---------- -->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/me.jpg">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>Greetings! I'm Dinuka, a passionate young Undergraduate with a love for Programming, AI and Networking. With a blend of creativity and technical expertise, I embark on a journey to transform ideas into impactful experiences</p>
+<!-- Particles Background -->
+<div id="particles-js"></div>
 
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Programming</span><br>Proficiency in Java and C++</li>
-                        <li><span>Web Development</span><br>Familiar with HTML, C++ and JavaScrpit</li>
-                        <li><span>Database</span><br>Proficiency in MySQL and PHP</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2023-CURRENT</span><br>Following BSc. Hons. in Computer Science Degree at KDU, while being involved in several hardware and software projects</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2017</span><br>9A passes at the GCE Ordinary Level Examination</li>
-                        <li><span>2021</span><br>1A and 2B passes in the GCE Advanced Level Examinations<li>
-                        <li><span>2023-CURRENT</span><br>Following CS Degree at KDU</li>
-                    </ul>
-                </div>
-            </div>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">DW</span>
+            <span class="logo-bracket">/&gt;</span>
         </div>
+        <ul class="nav-menu" id="sidemenu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#research" class="nav-link">Research</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li><a href="#work-experience" class="nav-link">Work Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
     </div>
-</div>
+</nav>
 
-<!-- ----------portfolio------------ -->
-<div id="portfolio">
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Dinuka <span class="gradient-text">Wickramasinghe</span></h1>
+            <div class="typing-container">
+                <span class="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Motivated Computer Science undergraduate with strong experience in Python, machine learning, agentic AI workflows, 
+                and intelligent automation. Passionate about applied AI, accessibility-driven systems, and real-world problem solving.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="Dinuka_Wickramasinghe_CV (2).pdf" download class="btn btn-secondary">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
+            <div class="hero-social">
+                <a href="https://www.linkedin.com/in/dinuka-wickramasinghe-70b111248/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Wicky2002" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-frame">
+                <img src="images/profile.jpg" alt="Dinuka Wickramasinghe">
+                <div class="image-overlay"></div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <a href="#about">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
+</section>
+<!-- About Section -->
+<section id="about" class="about-section">
     <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/harware.png">
-                <div class="layer">
-                    <h3>Apex Justice Storm Pack</h3>
-                    <p>Smart Backpack that allows users to travel long distances safely</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        <div class="section-header">
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <div class="about-image-wrapper">
+                    <img src="images/about-me.jpg" alt="About Dinuka">
+                    <div class="stats-overlay">
+                        <div class="stat-item">
+                            <h3>7+</h3>
+                            <p>Major Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>4</h3>
+                            <p>Research Papers</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>3.601</h3>
+                            <p>GPA (Dean's List)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="work">
-                <img src="images/cid.jpg">
-                <div class="layer">
-                    <h3>ShadowByte</h3>
-                    <p>Software project done with the affiliation of the CID in order to develop a tool integrating all OSINT tools.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            <div class="about-text">
+                <h3>Computer Science Student & AI Researcher</h3>
+                <p class="lead-text">
+                    I'm a dedicated Computer Science undergraduate at General Sir John Kotelawala Defence University with a 
+                    strong focus on machine learning, agentic AI workflows, and accessibility-driven systems.
+                </p>
+                <p>
+                    My work spans from production-oriented ML systems and intelligent automation to research in adaptive AI frameworks 
+                    and cognitive load modeling. I'm passionate about creating AI solutions that address real-world challenges, particularly 
+                    in accessibility, healthcare, and intelligent systems. <strong style="color: var(--primary-color);">🎓 Dean's List Awardee (GPA 3.601/4.00)</strong>
+                </p>
+                <div class="education-timeline">
+                    <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2023 - Present</span>
+                        <div class="timeline-content">
+                            <h5>BSc (Hons) in Computer Science</h5>
+                            <p>General Sir John Kotelawala Defence University (KDU)</p>
+                            <p class="timeline-detail">Current GPA: 3.601/4.00 | Dean's List Awardee | Expected: 2026</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2007 - 2022</span>
+                        <div class="timeline-content">
+                            <h5>Primary & Secondary Education</h5>
+                            <p>Ananda College, Colombo</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="work">
-                <img src="images/ai.png">
-                <div class="layer">
-                    <h3>Project on Cognitive Computing</h3>
-                    <p>Developing an AI solution for identification of dermatological diseases.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                <div class="personal-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Colombo, Sri Lanka</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+94 76 719 6896</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>dinukaw2002@gmail.com</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See more</a>
     </div>
-</div>
-<!-- ----------contact------------- -->
-<div id="contact">
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
     <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fas fa-paper-plane"></i> dinukaw2002@gmail.com</p>
-                <p><i class="fas fa-phone-square-alt"></i> 0767196896</p>
-                <div class="social-icons">
-                    <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-twitter-square"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
+        <div class="section-header">
+            <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-code"></i>
                 </div>
-                <a href="images/CV-AI.pdf" download class="btn btn2">Download CV</a>
+                <h3>Programming Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">PHP</span>
+                </div>
             </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>AI & Machine Learning</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">Keras</span>
+                    <span class="skill-tag">CNNs</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">Deep Learning</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Database & Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">PyCharm</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Cybersecurity</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">OSINT</span>
+                    <span class="skill-tag">Network Security</span>
+                    <span class="skill-tag">Penetration Testing</span>
+                    <span class="skill-tag">Digital Forensics</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Web Development</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express.js</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Hardware & Embedded</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Arduino</span>
+                    <span class="skill-tag">Raspberry Pi</span>
+                    <span class="skill-tag">IoT</span>
+                    <span class="skill-tag">Sensor Integration</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Experience & <span class="gradient-text">Activities</span></h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="experience-timeline">
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="experience-date">2023 - Present</span>
+                    <h3>Undergraduate Student</h3>
+                    <h4>General Sir John Kotelawala Defence University</h4>
+                    <p>
+                        Pursuing BSc (Hons) in Computer Science with a strong academic record (GPA: 3.83/4.00). 
+                        Actively engaged in multiple research projects focusing on AI, machine learning, and cybersecurity applications.
+                    </p>
+                    <ul class="experience-highlights">
+                        <li>Developed AI-powered dermatological diagnosis system using CNNs</li>
+                        <li>Created OSINT tool suite in collaboration with CID</li>
+                        <li>Designed IoT-enabled smart backpack with safety features</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="experience-date">2024</span>
+                    <h3>Project Collaborator</h3>
+                    <h4>Criminal Investigation Department (CID)</h4>
+                    <p>
+                        Collaborated with Sri Lanka's CID to develop ShadowByte, a comprehensive OSINT (Open Source Intelligence) 
+                        tool integrating multiple intelligence-gathering capabilities for law enforcement operations.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="experience-date">Ongoing</span>
+                    <h3>Research & Development</h3>
+                    <h4>Personal Projects</h4>
+                    <p>
+                        Continuously working on innovative projects spanning AI, hardware integration, and cybersecurity. 
+                        Focus on creating practical solutions that address real-world challenges in healthcare, security, and user safety.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Selected <span class="gradient-text">Projects</span></h2>
+            <div class="title-underline"></div>
+            <p class="section-description">Real-world applications spanning AI, accessibility, healthcare, and intelligent systems</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/shadowbyte.jpg" alt="ShadowByte">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-category">AI & Cyber Intelligence</div>
+                    <h3>ShadowByte - AI-Assisted Cyber Intelligence Platform</h3>
+                    <p>
+                        Developed an AI-assisted cyber intelligence system to support digital crime investigations in collaboration 
+                        with the Criminal Investigation Department (CID) of Sri Lanka. Applies machine learning and analytical reasoning 
+                        to identify suspicious behavioral patterns from digital evidence.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>Cyber Intelligence</span>
+                        <span>Data Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/portfolio-web.jpg" alt="CareSync">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-category">Healthcare Tech</div>
+                    <h3>CareSync - Healthcare Team Coordination Platform</h3>
+                    <p>
+                        🏆 1st Runner-Up at Code with WIE 2025. Full-stack healthcare coordination platform for medical professionals 
+                        to manage work schedules, wellness routines, and team collaboration. Features secure authentication and role-based access control.
+                    </p>
+                    <div class="project-tech">
+                        <span>Next.js</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Supabase</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/ai-dermatology.jpg" alt="Athena">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-category">Healthcare AI</div>
+                    <h3>Athena - AI-Powered Dementia Care Management</h3>
+                    <p>
+                        Caregiver-centric web application for dementia patient monitoring through structured daily logging, 
+                        behavioral analytics, and sentiment-based insights. Provides interactive dashboards and AI-assisted guidance.
+                    </p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Python</span>
+                        <span>AI Simulation</span>
+                        <span>Data Visualization</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/ml-projects.jpg" alt="Bookstore Ontology">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-category">Multi-Agent Systems</div>
+                    <h3>Ontology-Based Bookstore Management System</h3>
+                    <p>
+                        Semantic bookstore simulation integrating OWL/RDF ontologies with multi-agent system architecture. 
+                        Autonomous agents model customer behavior, inventory management, and operational decision-making.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>OWL/RDF</span>
+                        <span>Owlready2</span>
+                        <span>Mesa</span>
+                        <span>Streamlit</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/ai-dermatology.jpg" alt="Autoencoder">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-category">Deep Learning</div>
+                    <h3>Image Denoising Autoencoder</h3>
+                    <p>
+                        Convolutional autoencoder to remove noise from grayscale images while preserving structural details. 
+                        Evaluated on MNIST dataset with interactive GUI for real-time denoising and batch processing.
+                    </p>
+                    <div class="project-tech">
+                        <span>TensorFlow</span>
+                        <span>Keras</span>
+                        <span>Deep Learning</span>
+                        <span>OpenCV</span>
+                        <span>Tkinter</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/ml-projects.jpg" alt="Cinnamon Hotels">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-category">Agentic AI</div>
+                    <h3>Agentic Guest Experience Optimization - Cinnamon Hotels</h3>
+                    <p>
+                        Intelligent guest engagement system using multi-stage AI reasoning. Implements customer grouping through 
+                        unsupervised learning and predictive behavior modeling for adaptive, context-aware interactions.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>Agentic RAG</span>
+                        <span>Streamlit</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/portfolio-web.jpg" alt="eGOV">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-category">Digital Governance</div>
+                    <h3>eGOV - Modular National e-Government Platform</h3>
+                    <p>
+                        Scalable digital governance ecosystem with independent citizen, administration, and analytics portals. 
+                        Engineered with containerized development workflows for efficient deployment and data-driven insights.
+                    </p>
+                    <div class="project-tech">
+                        <span>Next.js</span>
+                        <span>Docker</span>
+                        <span>Supabase</span>
+                        <span>PostgreSQL</span>
+                        <span>Monorepo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Research & Publications Section -->
+<section id="research" class="experience-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Research & <span class="gradient-text">Publications</span></h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="experience-timeline">
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="experience-date">ICDS 2025</span>
+                    <h3>AI-Driven Inclusive Digital Infrastructure</h3>
+                    <h4>International Conference on Digital Solutions, West Bengal, India</h4>
+                    <p>
+                        Proposed an adaptive AI architecture that dynamically adjusts digital content complexity based on user sensory 
+                        and cognitive constraints. The framework employs transformer-based intelligence and edge-aware processing to 
+                        reduce cognitive overload for DHH and BVI users.
+                    </p>
+                    <ul class="experience-highlights">
+                        <li>Adaptive AI, Cognitive Load Modeling, Multimodal Systems, Edge Intelligence</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="experience-date">IRC 2025</span>
+                    <h3>Unified Framework for SLA-Aware and Carbon-Conscious Green Cloud Computing</h3>
+                    <h4>18th International Research Conference, KDU</h4>
+                    <p>
+                        Introduced a decision-oriented cloud optimization framework that jointly balances service reliability, 
+                        energy efficiency, and carbon impact using multi-criteria optimization techniques.
+                    </p>
+                    <ul class="experience-highlights">
+                        <li>Sustainable Cloud Systems, Green Computing, SLA Optimization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="experience-date">IRC 2025</span>
+                    <h3>Designing Sleepzy: Mobile Interface for Lucid Dream Induction</h3>
+                    <h4>18th International Research Conference, KDU</h4>
+                    <p>
+                        Designed a non-intrusive mobile-centered framework that integrates smart pillow sensing with adaptive 
+                        user interfaces to support REM-phase awareness and personalized sensory cue delivery.
+                    </p>
+                    <ul class="experience-highlights">
+                        <li>Sleep Technologies, Adaptive Interfaces, REM Analysis, HealthTech</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="experience-date">IRC 2025</span>
+                    <h3>Enhancing Sustainability Awareness Through Mobile Applications</h3>
+                    <h4>18th International Research Conference, KDU</h4>
+                    <p>
+                        Conducted qualitative and technical evaluation of sustainability-oriented applications to identify design 
+                        and engagement limitations affecting long-term behavioral change.
+                    </p>
+                    <ul class="experience-highlights">
+                        <li>Sustainability Informatics, UX Evaluation, SDG Technologies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ongoing Research Section -->
+<section id="ongoing-research" class="skills-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Ongoing <span class="gradient-text">Research</span></h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Topology-Informed 3D Fossil Reconstruction</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px; line-height: 1.7;">
+                    <strong style="color: var(--primary-color);">May 2025 - Present | Lead Researcher</strong><br>
+                    Developing a novel generative framework combining Graph Neural Networks (GNN) and GANs to reconstruct 
+                    fragmentary fossils. Proposed "Dual-Metric Evaluation" protocol using SSIM and Chamfer Distance to ensure 
+                    biological plausibility.
+                </p>
+            </div>
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>Real-Time Agentic Gameplay Coaching System</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px; line-height: 1.7;">
+                    <strong style="color: var(--primary-color);">Dec 2025 - Present | AI Architect</strong><br>
+                    Architecting a multi-layered Agentic AI system for real-time strategic coaching in competitive gaming. 
+                    Developing 7-layer system flow processing game state telemetry for context-aware tactical advice with 
+                    low-latency inference.
+                </p>
+            </div>
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-universal-access"></i>
+                </div>
+                <h3>ViDocX: AI-Driven Accessibility Framework</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px; line-height: 1.7;">
+                    <strong style="color: var(--primary-color);">Nov 2025 - Present | Final Year Project</strong><br>
+                    Developing an AI-powered document parsing engine to make complex academic PDFs accessible to BVI students. 
+                    Using LLMs to interpret semantic document layout and converting to navigable, screen-reader-friendly formats. 
+                    In collaboration with the Ceylon School for the Deaf and Blind, Ratmalana.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Achievements Section -->
+<section id="achievements" class="about-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Achievements & <span class="gradient-text">Awards</span></h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Competition Awards</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">🥈 Runner-Up - Code With WIE 2025 (IEEE)</span>
+                    <span class="skill-tag">🥈 Runner-Up - Innov8x University Edition 2025</span>
+                    <span class="skill-tag">🏆 Best Use of Technology - Data Odyssey 2025</span>
+                    <span class="skill-tag">Finalist - Rootcode Tech Triathlon 2025</span>
+                    <span class="skill-tag">Finalist - CodeRally 6.0 (Advanced Tier)</span>
+                    <span class="skill-tag">Finalist - Mini Hackathon (UoC Stat Circle)</span>
+                    <span class="skill-tag">Finalist - Cypher 3.0 (WIE KDU)</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h3>Academic Excellence</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">🎓 Dean's List Awardee (GPA > 3.60)</span>
+                    <span class="skill-tag">IEEE Xtreme Global Participant - 2024</span>
+                    <span class="skill-tag">IEEE Xtreme Global Participant - 2025</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Work Experience Section -->
+<section id="work-experience" class="experience-section" style="background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="experience-timeline">
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="experience-date">Apr 2022 - Present</span>
+                    <h3>Head Coach - Debating</h3>
+                    <h4>D. S. Senanayake College, Colombo (Hybrid)</h4>
+                    <p>
+                        Leading the school debating team, responsible for training students in argument construction, logical reasoning, 
+                        rebuttal techniques, and competitive strategy. Mentoring students in leadership, teamwork, and effective communication.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="experience-date">Jun 2022 - Jan 2023</span>
+                    <h3>Intern - Network Services Center</h3>
+                    <h4>Sampath Bank PLC, Colombo (On-site)</h4>
+                    <p>
+                        Worked within the Network Services Center supporting critical banking operations, including cheque clearance processes, 
+                        online payment transaction handling, and ATM service coordination. Gained hands-on exposure to operational reliability 
+                        and enterprise-scale financial systems.
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="experience-date">Nov 2020 - Mar 2022</span>
+                    <h3>Head Coach - Debating</h3>
+                    <h4>Mahamaya Girls' College, Kandy (Remote)</h4>
+                    <p>
+                        Led and coached the school debating team through remote training programs, focusing on analytical thinking, 
+                        case-building, and structured argument delivery. Adapted coaching methodologies to virtual environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Leadership Section -->
+<section id="leadership" class="skills-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Leadership & <span class="gradient-text">Volunteering</span></h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>IEEE Computer Society</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px; line-height: 1.7;">
+                    <strong style="color: var(--primary-color);">Chairperson (2025 - Present)</strong><br>
+                    Leading the IEEE Computer Society Student Branch Chapter at KDU, organizing technical workshops, competitions, and community events.
+                </p>
+            </div>
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>IEEE Student Branch, KDU</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px; line-height: 1.7;">
+                    <strong style="color: var(--primary-color);">Program & Finance Team Member (2023-2025)</strong><br>
+                    Contributed to event planning, budget management, and program coordination for IEEE activities at KDU.
+                </p>
+            </div>
+            <div class="skill-category">
+                <div class="category-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>British Computer Society</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px; line-height: 1.7;">
+                    <strong style="color: var(--primary-color);">Program Team Member (2023)</strong><br>
+                    Active member of the BCS Student Chapter at KDU, supporting technical programs and student development initiatives.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            <div class="title-underline"></div>
+            <p class="section-description">Let's collaborate and build something amazing together</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p>
+                    I'm always interested in hearing about new projects and opportunities. 
+                    Whether you have a question or just want to say hi, feel free to reach out!
+                </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <a href="mailto:dinukaw2002@gmail.com">dinukaw2002@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <a href="tel:+94767196896">+94 76 719 6896</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Colombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/dinuka-wickramasinghe-70b111248/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Wicky2002" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <form name="submit-to-google-sheet" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Subject" placeholder="Subject" required>
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </form>
                 <span id="msg"></span>
             </div>
         </div>
     </div>
-    <div class="copyright">
-        <p>Copyright © DinukaW.</p>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">DW</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <p class="footer-text">
+                Designed & Built by <span class="gradient-text">Dinuka Wickramasinghe</span>
+            </p>
+            <p class="footer-copyright">
+                © 2026 All rights reserved.
+            </p>
+        </div>
     </div>
-</div>
+</footer>
 
+<!-- Scroll to Top Button -->
+<button id="scrollTop" class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
-
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
+    // Particles.js Configuration
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: '#00d9ff' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: '#00d9ff',
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 2,
+                direction: 'none',
+                random: false,
+                straight: false,
+                out_mode: 'out',
+                bounce: false
+            }
+        },
+        interactivity: {
+            detect_on: 'canvas',
+            events: {
+                onhover: { enable: true, mode: 'repulse' },
+                onclick: { enable: true, mode: 'push' },
+                resize: true
+            }
+        },
+        retina_detect: true
+    });
 
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
+    // Typing Animation
+    const typingTexts = [
+        'Computer Science Student',
+        'AI & ML Enthusiast',
+        'Full-Stack Developer',
+        'Cybersecurity Researcher',
+        'Problem Solver'
+    ];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.querySelector('.typing-text');
+    
+    function type() {
+        const currentText = typingTexts[textIndex];
+        
+        if (isDeleting) {
+            typingElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingElement.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
         }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
+        
+        if (!isDeleting && charIndex === currentText.length) {
+            isDeleting = true;
+            setTimeout(type, 2000);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % typingTexts.length;
+            setTimeout(type, 500);
+        } else {
+            setTimeout(type, isDeleting ? 50 : 100);
         }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+    type();
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Scroll to Top Button
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Mobile Menu
+    function openmenu() {
+        document.getElementById("sidemenu").style.right = "0";
+    }
+    
+    function closemenu() {
+        document.getElementById("sidemenu").style.right = "-250px";
     }
 
-</script>
-
-<script>
-
-    var sidemeu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemeu.style.right = "0";
-    }
-    function closemenu(){
-        sidemeu.style.right = "-200px";
-    }
-
-</script>
-<script>
-    const scriptURL = '< add you own link here >' // add your own app script link here
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
+    // Form Submission
+    const scriptURL = '< add your own link here >';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
   
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "✓ Message sent successfully!";
+                msg.style.color = "#00ff88";
+                setTimeout(function(){
+                    msg.innerHTML = "";
+                }, 5000);
+                form.reset();
+            })
+            .catch(error => {
+                msg.innerHTML = "✗ Error sending message. Please try again.";
+                msg.style.color = "#ff4444";
+                console.error('Error!', error.message);
+            });
+    });
+
+    // Intersection Observer for Animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.project-card, .skill-category, .timeline-block, .contact-item').forEach(el => {
+        observer.observe(el);
+    });
+</script>
 </body>
 </html>
