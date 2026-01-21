@@ -5,34 +5,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinuka Wickramasinghe | Computer Science Student & Developer</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Dinuka Wickramasinghe | Computer Science Student & AI Developer</title>
+    <meta name="title" content="Dinuka Wickramasinghe | Computer Science Student & AI Developer">
+    <meta name="description" content="Computer Science undergraduate at KDU specializing in AI, machine learning, and intelligent automation. Dean's List Awardee with expertise in Python, agentic AI workflows, and accessibility-driven systems.">
+    <meta name="keywords" content="Dinuka Wickramasinghe, Computer Science, AI Developer, Machine Learning, Python, KDU, Agentic AI, Cybersecurity, Full Stack Developer">
+    <meta name="author" content="Dinuka Wickramasinghe">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dinukawickramasinghe.com/">
+    <meta property="og:title" content="Dinuka Wickramasinghe | Computer Science Student & AI Developer">
+    <meta property="og:description" content="Computer Science undergraduate specializing in AI, machine learning, and intelligent automation. Dean's List Awardee with proven expertise in real-world AI applications.">
+    <meta property="og:image" content="https://dinukawickramasinghe.com/images/profile.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dinukawickramasinghe.com/">
+    <meta property="twitter:title" content="Dinuka Wickramasinghe | Computer Science Student & AI Developer">
+    <meta property="twitter:description" content="Computer Science undergraduate specializing in AI, machine learning, and intelligent automation.">
+    <meta property="twitter:image" content="https://dinukawickramasinghe.com/images/profile.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dinuka Wickramasinghe",
+      "url": "https://dinukawickramasinghe.com",
+      "image": "https://dinukawickramasinghe.com/images/profile.jpg",
+      "jobTitle": "Computer Science Student",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "General Sir John Kotelawala Defence University"
+      },
+      "alumniOf": "Ananda College, Colombo",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Colombo",
+        "addressCountry": "Sri Lanka"
+      },
+      "email": "dinukaw2002@gmail.com",
+      "telephone": "+94767196896",
+      "sameAs": [
+        "https://www.linkedin.com/in/dinuka-wickramasinghe-70b111248/",
+        "https://github.com/Wicky2002"
+      ]
+    }
+    </script>
 </head>
 <body>
+<!-- Loading Screen -->
+<div id="loading-screen" class="loading-screen">
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">Loading Portfolio...</div>
+    </div>
+</div>
+
 <!-- Particles Background -->
-<div id="particles-js"></div>
+<div id="particles-js" aria-hidden="true"></div>
 
 <!-- Navigation -->
-<nav class="navbar">
+<nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
-        <div class="logo">
-            <span class="logo-bracket">&lt;</span>
+        <div class="logo" aria-label="Dinuka Wickramasinghe Logo">
+            <span class="logo-bracket" aria-hidden="true">&lt;</span>
             <span class="logo-text">DW</span>
-            <span class="logo-bracket">/&gt;</span>
+            <span class="logo-bracket" aria-hidden="true">/&gt;</span>
         </div>
-        <ul class="nav-menu" id="sidemenu">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#research" class="nav-link">Research</a></li>
-            <li><a href="#achievements" class="nav-link">Achievements</a></li>
-            <li><a href="#work-experience" class="nav-link">Work Experience</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-            <i class="fas fa-times" onclick="closemenu()"></i>
+        <ul class="nav-menu" id="sidemenu" role="menubar">
+            <li role="none"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+            <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+            <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+            <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+            <li role="none"><a href="#research" class="nav-link" role="menuitem">Research</a></li>
+            <li role="none"><a href="#achievements" class="nav-link" role="menuitem">Achievements</a></li>
+            <li role="none"><a href="#work-experience" class="nav-link" role="menuitem">Work Experience</a></li>
+            <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()" aria-label="Close menu" role="button" tabindex="0"></i>
         </ul>
-        <i class="fas fa-bars" onclick="openmenu()"></i>
+        <button class="menu-toggle" onclick="openmenu()" aria-label="Open menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
     </div>
 </nav>
 
@@ -69,8 +139,8 @@
         </div>
         <div class="hero-image">
             <div class="image-frame">
-                <img src="images/profile.jpg" alt="Dinuka Wickramasinghe">
-                <div class="image-overlay"></div>
+                <img src="images/profile.jpg" alt="Dinuka Wickramasinghe - Computer Science Student and AI Developer" loading="eager" width="400" height="400">
+                <div class="image-overlay" aria-hidden="true"></div>
             </div>
         </div>
     </div>
@@ -90,8 +160,8 @@
         <div class="about-content">
             <div class="about-image">
                 <div class="about-image-wrapper">
-                    <img src="images/about-me.jpg" alt="About Dinuka">
-                    <div class="stats-overlay">
+                    <img src="images/about-me.jpg" alt="Dinuka Wickramasinghe working on projects" loading="lazy" width="400" height="500">
+                    <div class="stats-overlay" aria-label="Academic achievements">
                         <div class="stat-item">
                             <h3>7+</h3>
                             <p>Major Projects</p>
@@ -311,11 +381,11 @@
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/shadowbyte.jpg" alt="ShadowByte">
+                    <img src="images/shadowbyte.jpg" alt="ShadowByte - AI-Assisted Cyber Intelligence Platform" loading="lazy" width="400" height="300">
                     <div class="project-overlay">
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link" aria-label="View ShadowByte live demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link" aria-label="View ShadowByte on GitHub"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -971,23 +1041,87 @@
 
     // Mobile Menu
     function openmenu() {
-        document.getElementById("sidemenu").style.right = "0";
+        const menu = document.getElementById("sidemenu");
+        const menuToggle = document.querySelector('.menu-toggle');
+        menu.style.right = "0";
+        menu.setAttribute('aria-hidden', 'false');
+        if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden'; // Prevent body scroll when menu is open
     }
     
     function closemenu() {
-        document.getElementById("sidemenu").style.right = "-250px";
+        const menu = document.getElementById("sidemenu");
+        const menuToggle = document.querySelector('.menu-toggle');
+        menu.style.right = "-250px";
+        menu.setAttribute('aria-hidden', 'true');
+        if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
     }
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closemenu();
+        }
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const menu = document.getElementById('sidemenu');
+        const menuToggle = document.querySelector('.menu-toggle');
+        if (menu.style.right === '0px' && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
+            closemenu();
+        }
+    });
 
-    // Form Submission
+    // Form Validation and Submission
     const scriptURL = '< add your own link here >';
     const form = document.forms['submit-to-google-sheet'];
     const msg = document.getElementById("msg");
+    
+    // Form validation function
+    function validateForm(formData) {
+        const name = formData.get('Name');
+        const email = formData.get('Email');
+        const message = formData.get('Message');
+        
+        if (!name || name.trim().length < 2) {
+            return { valid: false, message: 'Please enter a valid name (at least 2 characters)' };
+        }
+        
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+            return { valid: false, message: 'Please enter a valid email address' };
+        }
+        
+        if (!message || message.trim().length < 10) {
+            return { valid: false, message: 'Please enter a message (at least 10 characters)' };
+        }
+        
+        return { valid: true };
+    }
   
     form.addEventListener('submit', e => {
         e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        
+        const formData = new FormData(form);
+        const validation = validateForm(formData);
+        
+        if (!validation.valid) {
+            msg.innerHTML = "✗ " + validation.message;
+            msg.style.color = "#ff4444";
+            return;
+        }
+        
+        // Show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        fetch(scriptURL, { method: 'POST', body: formData})
             .then(response => {
-                msg.innerHTML = "✓ Message sent successfully!";
+                msg.innerHTML = "✓ Message sent successfully! I'll get back to you soon.";
                 msg.style.color = "#00ff88";
                 setTimeout(function(){
                     msg.innerHTML = "";
@@ -998,6 +1132,10 @@
                 msg.innerHTML = "✗ Error sending message. Please try again.";
                 msg.style.color = "#ff4444";
                 console.error('Error!', error.message);
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
             });
     });
 
@@ -1018,6 +1156,36 @@
     document.querySelectorAll('.project-card, .skill-category, .timeline-block, .contact-item').forEach(el => {
         observer.observe(el);
     });
+    
+    // Loading Screen
+    window.addEventListener('load', () => {
+        const loadingScreen = document.getElementById('loading-screen');
+        setTimeout(() => {
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }, 500);
+    });
+    
+    // Prevent right-click on images (optional protection)
+    document.addEventListener('contextmenu', (e) => {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    });
+    
+    // Add smooth hover effects for touch devices
+    if ('ontouchstart' in window) {
+        document.querySelectorAll('.project-card, .btn, .hero-social a').forEach(el => {
+            el.addEventListener('touchstart', function() {
+                this.classList.add('touch-active');
+            });
+            el.addEventListener('touchend', function() {
+                setTimeout(() => this.classList.remove('touch-active'), 300);
+            });
+        });
+    }
 </script>
 </body>
 </html>
