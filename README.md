@@ -152,6 +152,6 @@ This project is open source and available under the [MIT License](LICENSE).
 - **v2.0** (2026-01-18) - Complete redesign with modern techy UI, updated CV information
 - **v1.0** - Initial portfolio version
 
----
+
 
 **Made with ❤️ by Dinuka Wickramasinghe**

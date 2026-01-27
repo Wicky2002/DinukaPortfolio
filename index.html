@@ -1164,8 +1164,144 @@
             loadingScreen.style.opacity = '0';
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
+                // Trigger initial animations
+                document.body.classList.add('loaded');
             }, 500);
         }, 500);
+    });
+    
+    // Enhanced Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.project-card, .skill-category, .timeline-block, .about-content, .contact-item');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('scroll-reveal', 'active');
+                }, index * 100); // Stagger the animations
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    revealElements.forEach(el => {
+        el.classList.add('scroll-reveal');
+        revealObserver.observe(el);
+    });
+    
+    // Parallax Effect
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.hero-image, .about-image');
+                
+                parallaxElements.forEach(el => {
+                    const speed = 0.5;
+                    el.style.transform = `translateY(${scrolled * speed}px)`;
+                });
+                
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+    
+    // Magnetic Button Effect
+    const magneticButtons = document.querySelectorAll('.btn-primary, .btn-secondary');
+    
+    magneticButtons.forEach(btn => {
+        btn.classList.add('btn-magnetic');
+        
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.03)`;
+        });
+        
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0, 0) scale(1)';
+        });
+    });
+    
+    // Enhanced Card Tilt Effect
+    const cards = document.querySelectorAll('.project-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        });
+    });
+    
+    // Ripple Effect
+    const rippleElements = document.querySelectorAll('.btn, .project-card, .skill-tag');
+    
+    rippleElements.forEach(el => {
+        el.classList.add('ripple');
+    });
+    
+    // Smooth Color Transitions for Skill Tags
+    const skillTags = document.querySelectorAll('.skill-tag');
+    
+    skillTags.forEach((tag, index) => {
+        tag.style.animationDelay = `${index * 0.05}s`;
+    });
+    
+    // Performance: Debounce scroll events
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
+    // Enhanced Navbar with debounced scroll
+    const handleNavbarScroll = debounce(() => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }, 10);
+    
+    window.addEventListener('scroll', handleNavbarScroll);
+    
+    // Add particle effect class to interactive elements
+    document.querySelectorAll('.hero-social a, .contact-social a').forEach(el => {
+        el.classList.add('particle-effect');
+    });
+    
+    // Preload critical images
+    const criticalImages = ['images/profile.jpg', 'images/about-me.jpg'];
+    criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
     });
     
     // Prevent right-click on images (optional protection)
@@ -1186,6 +1322,12 @@
             });
         });
     }
+    
+    // Console Easter Egg
+    console.log('%c👋 Hi there, Developer!', 'color: #00f5ff; font-size: 20px; font-weight: bold;');
+    console.log('%cInterested in how this portfolio was built?', 'color: #8b5cf6; font-size: 14px;');
+    console.log('%cFeel free to reach out: dinukaw2002@gmail.com', 'color: #10d989; font-size: 14px;');
+
 </script>
 </body>
 </html>
