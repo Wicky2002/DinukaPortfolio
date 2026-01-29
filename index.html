@@ -81,6 +81,13 @@
 <!-- Particles Background -->
 <div id="particles-js" aria-hidden="true"></div>
 
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<!-- Spotlight Effect -->
+<div class="spotlight"></div>
+
 <!-- Navigation -->
 <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
@@ -107,11 +114,11 @@
 </nav>
 
 <!-- Hero Section -->
-<section id="home" class="hero">
+<section id="home" class="hero hex-pattern">
     <div class="hero-content">
-        <div class="hero-text">
-            <p class="hero-greeting">Hello, I'm</p>
-            <h1 class="hero-name">Dinuka <span class="gradient-text">Wickramasinghe</span></h1>
+        <div class="hero-text slide-in-left">
+            <p class="hero-greeting glow-text">Hello, I'm</p>
+            <h1 class="hero-name">Dinuka <span class="gradient-text rainbow-text">Wickramasinghe</span></h1>
             <div class="typing-container">
                 <span class="typing-text"></span>
                 <span class="cursor">|</span>
@@ -121,31 +128,31 @@
                 and intelligent automation. Passionate about applied AI, accessibility-driven systems, and real-world problem solving.
             </p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="Dinuka_Wickramasinghe_CV (2).pdf" download class="btn btn-secondary">
+                <a href="#projects" class="btn btn-primary btn-morph btn-liquid pulsate-glow">View My Work</a>
+                <a href="Dinuka_Wickramasinghe_CV (2).pdf" download class="btn btn-secondary btn-morph">
                     <i class="fas fa-download"></i> Download CV
                 </a>
             </div>
             <div class="hero-social">
-                <a href="https://www.linkedin.com/in/dinuka-wickramasinghe-70b111248/" target="_blank" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/dinuka-wickramasinghe-70b111248/" target="_blank" title="LinkedIn" class="neon-underline">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/Wicky2002" target="_blank" title="GitHub">
+                <a href="https://github.com/Wicky2002" target="_blank" title="GitHub" class="neon-underline">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="image-frame">
+        <div class="hero-image slide-in-right">
+            <div class="image-frame breathe-animation">
                 <img src="images/profile.jpg" alt="Dinuka Wickramasinghe - Computer Science Student and AI Developer" loading="eager" width="400" height="400">
-                <div class="image-overlay" aria-hidden="true"></div>
+                <div class="image-overlay scan-effect" aria-hidden="true"></div>
             </div>
         </div>
     </div>
     <div class="scroll-indicator">
-        <a href="#about">
+        <a href="#about" class="bounce-arrow">
             <i class="fas fa-chevron-down"></i>
         </a>
     </div>
@@ -1327,6 +1334,148 @@
     console.log('%c👋 Hi there, Developer!', 'color: #00f5ff; font-size: 20px; font-weight: bold;');
     console.log('%cInterested in how this portfolio was built?', 'color: #8b5cf6; font-size: 14px;');
     console.log('%cFeel free to reach out: dinukaw2002@gmail.com', 'color: #10d989; font-size: 14px;');
+    
+    // Custom Cursor Effect
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorOutline = document.querySelector('.cursor-outline');
+    const spotlight = document.querySelector('.spotlight');
+    
+    if (cursorDot && cursorOutline && spotlight) {
+        let mouseX = 0, mouseY = 0;
+        let outlineX = 0, outlineY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            // Update cursor dot immediately
+            cursorDot.style.left = mouseX + 'px';
+            cursorDot.style.top = mouseY + 'px';
+            
+            // Update spotlight
+            spotlight.style.left = (mouseX - 300) + 'px';
+            spotlight.style.top = (mouseY - 300) + 'px';
+        });
+        
+        // Smooth cursor outline animation
+        function animateOutline() {
+            outlineX += (mouseX - outlineX) * 0.15;
+            outlineY += (mouseY - outlineY) * 0.15;
+            
+            cursorOutline.style.left = (outlineX - 20) + 'px';
+            cursorOutline.style.top = (outlineY - 20) + 'px';
+            
+            requestAnimationFrame(animateOutline);
+        }
+        animateOutline();
+        
+        // Cursor hover effects
+        const interactiveElements = document.querySelectorAll('a, button, .btn, .project-card, .skill-tag');
+        
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursorDot.style.transform = 'scale(2)';
+                cursorOutline.style.transform = 'scale(1.5)';
+                cursorOutline.style.borderColor = '#ff1f8e';
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                cursorDot.style.transform = 'scale(1)';
+                cursorOutline.style.transform = 'scale(1)';
+                cursorOutline.style.borderColor = '#00f5ff';
+            });
+        });
+        
+        // Hide default cursor on desktop
+        if (window.innerWidth > 768) {
+            document.body.style.cursor = 'none';
+            interactiveElements.forEach(el => {
+                el.style.cursor = 'none';
+            });
+        }
+    }
+    
+    // Stagger Animation for Skill Categories
+    const skillCategories = document.querySelectorAll('.skill-category');
+    skillCategories.forEach((cat, index) => {
+        cat.classList.add('stagger-item');
+        cat.style.animationDelay = `${index * 0.15}s`;
+    });
+    
+    // Add wave animation to hero greeting
+    const heroGreeting = document.querySelector('.hero-greeting');
+    if (heroGreeting) {
+        heroGreeting.classList.add('wave-animation');
+    }
+    
+    // Cyber grid for about section
+    const aboutSection = document.querySelector('.about-section');
+    if (aboutSection) {
+        aboutSection.classList.add('cyber-grid');
+    }
+    
+    // Enhanced scroll progress indicator
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        
+        // Create or update progress bar
+        let progressBar = document.querySelector('.scroll-progress');
+        if (!progressBar) {
+            progressBar = document.createElement('div');
+            progressBar.className = 'progress-bar scroll-progress';
+            progressBar.style.cssText = 'position: fixed; top: 0; left: 0; height: 3px; z-index: 9999; transition: width 0.1s ease;';
+            document.body.appendChild(progressBar);
+        }
+        progressBar.style.width = scrolled + '%';
+    });
+    
+    // Glitch effect on logo click
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.classList.add('glitch-effect');
+        logo.addEventListener('click', () => {
+            logo.style.animation = 'glitch 0.3s ease';
+            setTimeout(() => {
+                logo.style.animation = '';
+            }, 300);
+        });
+    }
+    
+    // Add gradient borders to project cards
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.classList.add('gradient-border');
+    });
+    
+    // Intersection observer for fade-in animations
+    const fadeInElements = document.querySelectorAll('.timeline-card, .about-image-wrapper');
+    const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                fadeInObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    fadeInElements.forEach(el => {
+        fadeInObserver.observe(el);
+    });
+    
+    // Performance monitoring
+    if ('PerformanceObserver' in window) {
+        const perfObserver = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+                if (entry.duration > 50) {
+                    console.log('Long task detected:', entry.duration.toFixed(2) + 'ms');
+                }
+            }
+        });
+        perfObserver.observe({ entryTypes: ['longtask'] });
+    }
+
 
 </script>
 </body>
