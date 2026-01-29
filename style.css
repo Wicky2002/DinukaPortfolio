@@ -378,6 +378,8 @@ a:focus-visible {
     justify-content: center;
     position: relative;
     padding: 100px 20px 50px;
+    z-index: 1;
+    isolation: isolate;
 }
 
 .hero-content {
@@ -683,6 +685,7 @@ a:focus-visible {
 
 .hero-image {
     position: relative;
+    z-index: 1;
 }
 
 .image-frame {
@@ -691,6 +694,7 @@ a:focus-visible {
     max-width: 400px;
     margin: 0 auto;
     animation: float 6s ease-in-out infinite;
+    z-index: 1;
 }
 
 @keyframes float {
@@ -827,8 +831,9 @@ a:focus-visible {
 .about-section {
     padding: 100px 20px;
     position: relative;
-    z-index: 1;
+    z-index: 10;
     background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+    isolation: isolate;
 }
 
 .about-content {
@@ -970,7 +975,9 @@ a:focus-visible {
 .skills-section {
     padding: 100px 20px;
     position: relative;
-    z-index: 1;
+    z-index: 10;
+    background: var(--bg-dark);
+    isolation: isolate;
 }
 
 .skills-grid {
@@ -2360,6 +2367,12 @@ select:focus {
 }
 
 /* Enhanced Section Dividers */
+section {
+    position: relative;
+    background: var(--bg-dark);
+    isolation: isolate;
+}
+
 section::after {
     content: '';
     position: absolute;
